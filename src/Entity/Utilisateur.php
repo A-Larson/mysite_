@@ -4,11 +4,14 @@ namespace src\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use ApiPlatform\Core\Annotation\ApiResource;
+
 /**
  * Utilisateur
  *
  * @ORM\Table(name="utilisateur", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_1D1C63B3C05FB297", columns={"confirmation_token"}), @ORM\UniqueConstraint(name="UNIQ_1D1C63B392FC23A8", columns={"username_canonical"})})
  * @ORM\Entity
+ * @ApiResource()
  */
 class Utilisateur
 {
@@ -96,7 +99,7 @@ class Utilisateur
      *
      * @ORM\Column(name="email_canonical", type="string", length=255, nullable=true)
      */
-    private $emailCanonical;
+    private $emailCanonical;//test
 
 
 }
